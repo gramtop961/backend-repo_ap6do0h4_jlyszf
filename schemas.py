@@ -24,6 +24,7 @@ class DietRequest(BaseModel):
     age: int = Field(..., ge=1, le=120)
     height_cm: float = Field(..., gt=0)
     weight_kg: float = Field(..., gt=0)
+    gender: Literal['male','female','transgender']
     health_issues: Optional[str] = None
     medical_history: Optional[str] = None
     food_type: Literal['veg','non-veg','vegan','lactose-intolerant','gluten-free','keto','paleo','other']
